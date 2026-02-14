@@ -1,0 +1,182 @@
+<h1> Gerenciador de usuários </h1>
+<hr/>
+
+<h2> Cadastro </h2>
+
+<!--------------------------------   FORMULÁRIO   -------------------------------->
+
+<form onsubmit="salvar(event)">
+
+    <label> 
+        Digite o nome:
+        <br/>
+        <input required type="text" class="inputNome"/>
+    </label>
+
+    <br/><br/>
+
+    <label> 
+        Digite o e-mail:
+        <br/>
+        <input required type="email" class="inputEmail"/>
+    </label>
+
+    <br/><br/>
+
+    <label> 
+        Digite o CPF:
+        <br/>
+        <input required type="number" class="inputCpf"/>
+    </label>
+
+    <br/><br/>
+
+    <label> 
+        Digite a data de nascimento:
+        <br/>
+        <input required type="date" class="inputData"/>
+    </label>
+
+    <br/><br/>
+
+    <label> 
+        Digite a Senha:
+        <br/>
+        <input required type="password" class="inputSenha"/>
+    </label>
+
+    <br/><br/>
+
+    <label> 
+        Digite o CEP:
+        <br/>
+        <input required type="number" class="inputCep"/>
+    </label>
+
+    <br/><br/>
+
+    <label> 
+        Digite o Bairro:
+        <br/>
+        <input required type="text" class="inputBairro"/>
+    </label>
+
+    <br/><br/>
+
+    <label> 
+        É Responsável?
+        <br/>
+        <select required class="inputResponsavel"> 
+            <option> Sim </option>
+            <option> Não </option>
+        </select>
+    </label>
+
+    <br/><br/>
+
+    <label> 
+        É Premium?
+        <br/>
+        <select required class="inputPremium"> 
+            <option> Sim </option>
+            <option> Não </option>
+        </select>    
+    </label>
+
+    <br/><br/>
+
+    <label> 
+        Está ativo?
+        <br/>
+        <select required class="inputAtivo"> 
+            <option> Sim </option>
+            <option> Não </option>
+        </select>
+    </label>
+
+    <br/><br/>
+
+    <button type="submit"> Salvar </button>
+    <button type="reset"> Cancelar </button>
+
+</form>
+
+<hr/>
+
+<h2> Listagens </h2>
+
+<table border="1px" class="tabelaListagem">
+
+    <tr>
+        <td> <strong> Nome </strong></td>
+        <td> <strong> E-mail </strong></td>
+        <td> <strong> CPF </strong></td>
+        <td> <strong> Data de nascimento </strong></td>
+        <td> <strong> Senha </strong></td>
+        <td> <strong> CEP </strong></td>
+        <td> <strong> Bairro </strong></td>
+        <td> <strong> Responsável </strong></td>
+        <td> <strong> Premium </strong></td>
+        <td> <strong> Ativo </strong></td>
+
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr
+</table>
+
+
+<!--------------------------------   SCRIPT   -------------------------------->
+
+<script>
+
+    function salvar(e){
+
+        e.preventDefault()
+
+        let nome = document.querySelector(".inputNome").value 
+        let email = document.querySelector(".inputEmail").value
+        let cpf = document.querySelector(".inputCpf").value
+        let dataNascimento = document.querySelector(".inputData").value
+        let senha = document.querySelector(".inputSenha").value
+        let cep = document.querySelector(".inputCep").value
+        let bairro = document.querySelector(".inputBairro").value
+        let responsavel = document.querySelector(".inputResponsavel").value
+        let premium = document.querySelector(".inputPremium").value
+        let ativo = document.querySelector(".inputAtivo").value
+
+
+
+        // alert(`Nome: ${nome} \nE-mail: ${email} \nSenha: ${senha}`)
+
+        let conteudo = `
+        <tr>
+            <td> ${nome} </td>
+            <td> ${email} </td>
+            <td> ${cpf} </td>
+            <td> ${dataNascimento} </td>
+            <td> ${senha} </td>
+            <td> ${cep} </td>
+            <td> ${bairro} </td>
+            <td> ${responsavel} </td>
+            <td> ${premium} </td>
+            <td> ${ativo} </td>
+
+            </tr>
+        `
+
+        document.querySelector(".tabelaListagem").innerHTML += conteudo
+
+    }
+
+</script>

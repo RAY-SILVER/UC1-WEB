@@ -1,0 +1,36 @@
+<h1> DOM </h1>
+<P> Manipular HTML usando JavaScript </P>
+
+<hr/>
+
+<p class="textoMensagem"></p>
+<button onclick="trocar_mensagem()"> Trocar mensagem </button>
+
+<hr/>
+
+<p class="emoji"></p>
+<button onclick="sol()"> 🌞 </button>
+<button onclick="lua()"> 🌚 </button>
+
+<script>
+
+    function trocar_mensagem(){
+
+        let mensagem = "Acredite nos seus sonhos!"
+        document.querySelector(".textoMensagem").innerHTML += mensagem
+
+    }
+
+    function sol(){
+        let sol = "Bom dia!"
+
+        document.querySelector(".emoji").innerHTML = sol
+    }
+
+    function lua(){
+        let lua = "Boa noite!"
+
+        document.querySelector(".emoji").innerHTML = lua
+    }
+
+</script>

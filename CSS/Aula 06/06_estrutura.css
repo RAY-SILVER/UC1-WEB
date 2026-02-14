@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+    background-color: pink;
+    font-family: arial;
+}
+
+.textoDestaque{
+    color: red;
+}
+
+p{
+    color: blue;
+}
+
+h1{
+    color: indigo;
+    background: plum;
+    text-align: center;
+}
+

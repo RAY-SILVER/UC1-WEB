@@ -1,0 +1,52 @@
+<form>
+
+    <p> Nome Completo: </p> 
+    <input type="text" minlength="10" required class="inputNome"/> 
+    
+    <p> E-mail: </p> 
+    <input type="email" required class="inputEmail"/> 
+
+    <p> Idade: </p>
+    <input type="number" required class="inputIdade"/>
+
+    <p> Data de nascimento: </p>
+    <input type="date" required class="inputData"/>
+
+    <p> Telefone: </p>
+    <input type="tel" required class="inputTel"/>
+
+    <p> Estado: </p>
+    <select name="estado" class="inputEstado">
+        <option>São Paulo</option>
+        <option>Minas Gerais</option>
+        <option>Rio de Janeiro</option>
+        <option>Outros</option>
+    </select>
+
+    <p> Observações: </p>
+    <textarea type="texto" class="inputObs"></textarea>
+
+    <br/><br/>
+    <button onclick="cadastro()"> Cadastrar </button>
+
+</form>
+
+<script>
+
+    function cadastro(){
+
+        let nome = document.querySelector(".inputNome").value 
+        let email = document.querySelector(".inputEmail").value 
+        let idade = document.querySelector(".inputIdade").value 
+        let dataNasc = document.querySelector(".inputData").value 
+        let telefone = document.querySelector(".inputTel").value 
+        let estado = document.querySelector(".inputEstado").value 
+        let obs = document.querySelector(".inputObs").value 
+
+
+        alert("Nome: " + nome + "\nEmail: " + email + "\nIdade: " + idade + "\nTelefone: " + telefone + "\nEstado: " + estado + "\nObservações: " + obs)
+
+    }
+
+
+</script>
